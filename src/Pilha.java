@@ -10,20 +10,20 @@ public class Pilha {
         this.topo = 0;
     }
 
-    public void receberValor(int num) {
+    public boolean receberValor(int num) {
         switch (num) {
             case 1, 2, 3:
                 inserirPilha(num);
-                break;
+                return true;
             case 0:
                 removerPilhar();
-                break;
+                return true;
             case -1:
                 imprimirPilha();
-                break;
+                return false;
             default:
                 System.out.println("Num inválido");
-                break;
+                return true;
         }
     }
 
